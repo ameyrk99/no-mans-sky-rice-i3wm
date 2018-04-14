@@ -14,7 +14,7 @@
 * [w3m](https://www.archlinux.org/packages/extra/x86_64/w3m/) to preview images in ranger
 * [Python-PyWal](https://github.com/dylanaraps/pywal)
 * [Betterlockscreen](https://github.com/pavanjadhaw/betterlockscreen) and it's dependencies
-* [compiz](http://www.compiz.org) for smooth transitions
+* [compton](https://wiki.archlinux.org/index.php/Compton) for smooth transitions
 
 #### Terminal:
 * [gnome-terminal](https://aur.archlinux.org/packages/gnome-terminal-transparency/)
