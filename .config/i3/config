@@ -191,4 +191,9 @@ exec_always --no-startup-id mailspring
 exec_always --no-startup-id octopi-notifier
 
 #powermenu
-bindsym Control+Mod1+Delete exec $HOME/.i3/scripts/shutdown_menu
+bindsym Control+Mod1+Delete exec $HOME/.i3/shutdown_menu
+
+#application shorcuts
+bindsym $mod+Shift+f exec nautilus
+bindsym $mod+Shift+o exec opera
+bindsym $mod+Shift+b exec firefox

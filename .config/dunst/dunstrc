@@ -14,7 +14,7 @@
     font = Space Mono 12
     format = "<b>%s</b>\n%b"
     # geometry [{width}]x{height}][+/-{x}+/-{y}]
-    geometry = "0-10+10"
+    geometry = "0-10+30"
     history_length = 20
     horizontal_padding = 8
     idle_threshold = 120

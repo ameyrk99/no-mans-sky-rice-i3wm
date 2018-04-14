@@ -14,6 +14,7 @@
 * [w3m](https://www.archlinux.org/packages/extra/x86_64/w3m/) to preview images in ranger
 * [Python-PyWal](https://github.com/dylanaraps/pywal)
 * [Betterlockscreen](https://github.com/pavanjadhaw/betterlockscreen) and it's dependencies
+* [compiz](http://www.compiz.org) for smooth transitions
 
 #### Terminal:
 * [gnome-terminal](https://aur.archlinux.org/packages/gnome-terminal-transparency/)
@@ -39,6 +40,7 @@ others in your $HOME
 * Change location under weather in .i3/i3blocks.conf
 * Change $bat_number in .i3/scripts/battery accordingly
 * Shutdown menu/Powermenu won't work if you decided to use dmenu and not get rofi (unless you have zentiy)
+* Log out and back in for lockscreen to change the wallpaper
 
 #### Wallpaper:
 If that's all you need...
