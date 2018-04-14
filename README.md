@@ -6,7 +6,7 @@
 
 ----
 #### Pre-reqs:
-* [i3 gapps](https://github.com/Airblader/i3)...obviously
+* [i3 gaps](https://github.com/Airblader/i3)...obviously
 * [i3blocks](https://github.com/vivien/i3blocks) and it's dependencies
 * [rofi](https://github.com/DaveDavenport/rofi) or [dmenu](https://wiki.archlinux.org/index.php/dmenu) which ever you prefer 
 * [ranger](https://github.com/ranger/ranger)
@@ -30,7 +30,7 @@ script for i3blocks
 * [Powermenu](https://github.com/vivien/i3blocks-contrib/tree/master/shutdown_menu) 
 which uses rofi or zenity
 
-You don't need to download those...just saying where I got 
+You don't need to download the scripts separately...just saying where I got 
 the scripts from.
 
 ----
@@ -39,7 +39,7 @@ the scripts from.
 others in your $HOME
 * Change location under weather in .i3/i3blocks.conf
 * Change $bat_number in .i3/scripts/battery accordingly
-* Shutdown menu/Powermenu won't work if you decided to use dmenu and not get rofi (unless you have zentiy)
+* Shutdown menu/Powermenu won't work if you decided to use dmenu and not get rofi (unless you have zenity)
 * Log out and back in for lockscreen to change the wallpaper
 
 #### Wallpaper:
