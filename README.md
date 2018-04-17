@@ -29,6 +29,7 @@ i3Blocks:
 * [Betterlockscreen](https://github.com/pavanjadhaw/betterlockscreen) and it's dependencies
 * [compton](https://wiki.archlinux.org/index.php/Compton) for smooth transitions
 * [polybar](https://github.com/jaagr/polybar) and it's dependencies if you plan to use that.
+* [CLI-Visualizer](https://github.com/dpayne/cli-visualizer)
 
 #### Terminal:
 * [gnome-terminal](https://aur.archlinux.org/packages/gnome-terminal-transparency/)
@@ -43,6 +44,7 @@ script for i3 blocks
 script for i3blocks
 * [Powermenu](https://github.com/vivien/i3blocks-contrib/tree/master/shutdown_menu) 
 which uses rofi or zenity
+* [Uptime](https://github.com/mohabaks/dotfiles/blob/master/config/polybar/.config/polybar/uptime)
 
 You don't need to download the scripts separately...just saying where I got 
 the scripts from. I've changed some stuff in the scripts, and I've kept the headers in the files if
