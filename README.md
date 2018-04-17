@@ -1,8 +1,21 @@
 # No Man's Sky Rice - i3wm
 
-![Screenshot](images/sc1.png)
+![Screenshot](images/scm.png)
 
 ![Lockscreen](images/scl.png)
+
+Power Menus:
+
+![PowerMenu 1](images/scpm1.png)
+![PowerMenu 2](images/scpm2.png)
+
+Notifications:
+
+![Dunst](images/scdunst.png)
+
+i3Blocks:
+
+![i3blocks](images/sci3blocks.png)
 
 ----
 #### Pre-reqs:
@@ -15,6 +28,7 @@
 * [Python-PyWal](https://github.com/dylanaraps/pywal)
 * [Betterlockscreen](https://github.com/pavanjadhaw/betterlockscreen) and it's dependencies
 * [compton](https://wiki.archlinux.org/index.php/Compton) for smooth transitions
+* [polybar](https://github.com/jaagr/polybar) and it's dependencies if you plan to use that.
 
 #### Terminal:
 * [gnome-terminal](https://aur.archlinux.org/packages/gnome-terminal-transparency/)
@@ -31,13 +45,11 @@ script for i3blocks
 which uses rofi or zenity
 
 You don't need to download the scripts separately...just saying where I got 
-the scripts from.
+the scripts from. I've changed some stuff in the scripts, and I've kept the headers in the files if
+they had any so you can check out their work if you want.
 
 ----
 #### Note:
-* All files and folders in .config to into $HOME/.config and 
-others in your $HOME
-* Change location under weather in .i3/i3blocks.conf
 * Change $bat_number in .i3/scripts/battery accordingly
 * Shutdown menu/Powermenu won't work if you decided to use dmenu and not get rofi (unless you have zenity)
 * Log out and back in for lockscreen to change the wallpaper
@@ -46,3 +58,8 @@ others in your $HOME
 If that's all you need...
 
 ![Wallpaper](.i3/bg1.jpg)
+
+...and if colors are all you need...
+
+* <span style="color: #52bbb7">#52bbb7</span>
+* <span style="color: #ca4862">#ca4862</span>

@@ -14,7 +14,7 @@
     font = Space Mono 12
     format = "<b>%s</b>\n%b"
     # geometry [{width}]x{height}][+/-{x}+/-{y}]
-    geometry = "0-10+30"
+    geometry = "0-8+65"
     history_length = 20
     horizontal_padding = 8
     idle_threshold = 120
@@ -31,12 +31,12 @@
     sort = yes
     startup_notification = false
     sticky_history = yes
-    transparency = 10
+    transparency = 0
     word_wrap = no
 
-[frame]
-    width = 1
-    color = "6092BE"
+#[frame]
+#    width = 1
+#    color = "CA4862"
 
 [shortcuts]
     #close = mod4+x

@@ -1,3 +1,26 @@
+###############################################################################
+#
+#  _ _____  __        ____  __    _     _ _____        ____                  
+# (_)___ /  \ \      / /  \/  |  | |   (_)___ /       / ___| __ _ _ __  ___  
+# | | |_ \   \ \ /\ / /| |\/| |  | |   | | |_ \ _____| |  _ / _` | '_ \/ __| 
+# | |___) |   \ V  V / | |  | |  | |   | |___) |_____| |_| | (_| | |_) \__ \ 
+# |_|____/     \_/\_/  |_|  |_|  | |   |_|____/       \____|\__,_| .__/|___/ 
+#                                |_|                             |_|         
+#
+###############################################################################
+
+######################################################################
+#
+# No Man's Sky Themed config for i3 gaps by Amey Khairnar
+# Check https://github.com/ameyrk99/no-mans-sky-rice-i3wm for all files and info
+#
+# Check https://i3wm.org/docs/userguide.html for a complete reference!
+#
+######################################################################
+
+#---------------------------------------------------------------------------------------------------
+#BASIC CONFIG AND STUFF...
+#---------------------------------------------------------------------------------------------------
 # Set modifier key to Windows key
 set $mod Mod4
 
@@ -13,9 +36,9 @@ bindsym $mod+Return exec gnome-terminal
 #Close window
 bindsym $mod+Shift+q kill
 
-# Open dmenu 
-bindsym $mod+d exec dmenu_run -fn 'Overpass Mono:pixelsize=15' -l 5 -nf '#707880' -sf '#52bbb7' -nb '#1d1f21' -sb '#1d1f21'
-
+#---------------------------------------------------------------------------------------------------
+#CONTAINERS AND STUFF...
+#---------------------------------------------------------------------------------------------------
 # Change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
@@ -63,33 +86,86 @@ bindsym $mod+space focus mode_toggle
 # Focus the parent container
 bindsym $mod+a focus parent
 
+#gaps
+gaps inner 8
+#gaps outer 5
+#smart_gaps on
+
+
+#---------------------------------------------------------------------------------------------------
+#WORKSPACES AND STUFF...
+#---------------------------------------------------------------------------------------------------
+# Set default names to workspaces 
+#Other
+set $ws1 "1: "
+#Opera/Firefox
+set $ws2 "2: "
+#Files
+set $ws3 "3: "
+#Neovim
+set $ws4 "4: "
+#VLC 
+set $ws5 "5: "
+#Office
+set $ws6 "6: "
+#Pinta/Krita
+set $ws7 "7: "
+#Steam/CS GO...
+set $ws8 "8: "
+#Spotify
+set $ws9 "9: "
+#Mail
+set $ws10 "10: "
+
+#settings for some applications
+#use xprop to get classes for the applications
+assign [class="Firefox|Opera"] $ws2
+assign [class="Nautilus"] $ws3
+assign [class="Code"] $ws4
+assign [class="vlc"] $ws5
+assign [class="Wps"] $ws6
+assign [class="Pinta|krita"] $ws7
+assign [class="Steam"] $ws8
+assign [class="Spotify"] $ws9
+assign [class="Mailspring"] $ws10
+
+#float some windows by default
+for_window [class="Gnome-terminal"] floating enable, move position center resize set 800 500
+#for_window [class="Nautilus"] floating enable
+for_window [class="SpeedCrunch"] floating enable, move position center resize set 400 450
+
 # Switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
 
 # Move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
 
+
+#---------------------------------------------------------------------------------------------------
+#SYSTEM STATUS AND STUFF...
+#---------------------------------------------------------------------------------------------------
 #lockscreen
 bindsym $mod+shift+x exec betterlockscreen --lock
-# where /lock contains wallpapers for lockscreen
+#Set image for lockscreen
+#where /lock contains wallpapers for lockscreen
 exec --no-startup-id betterlockscreen -u ~/.i3/lock
 # Reload the configuration file
 bindsym $mod+Shift+c reload
@@ -104,10 +180,6 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
         bindsym j resize shrink width 5 px or 5 ppt
         bindsym l resize grow height 5 px or 5 ppt
         bindsym semicolon resize shrink height 5 px or 5 ppt
@@ -119,39 +191,53 @@ mode "resize" {
         bindsym Up resize shrink height 5 px or 5 ppt
         bindsym Right resize grow width 5 px or 5 ppt
 
-        # back to normal: Enter or Escape
+        # back to normal mode: Enter or Escape
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
 
 bindsym $mod+r mode "resize"
 
+
+#---------------------------------------------------------------------------------------------------
+#BAR AND STUFF...
+#---------------------------------------------------------------------------------------------------
 #colors
 set $colordark #191919
 set $verdigris #52bbb7
 set $darkterracotta #ca4862
 
-#bar
-bar {
-        position top
-        tray_padding 4
-        #strip_workspace_numbers yes
- 	status_command i3blocks -c ~/.i3/i3blocks.conf
-        separator_symbol "  "
-        #tray_output none
- 	colors {
-                separator $darkterracotta
-                background $colordark
-                statusline #839496
-                #                       border          backg           text
-                focused_workspace       $verdigris      $verdigris      $colordark
-                active_workspace        $verdigris      $verdigris      $colordark
-                inactive_workspace      #32312d         #32312d         $verdigris
-                urgent_workspace        #d33936         #d33936         #fdf6e3
-        }
-}
+# #bar
+#uncomment this part if you want to use i3blocks
+# bar {
+#         position top
+#         tray_padding 4
+#         #strip_workspace_numbers yes
+#  	status_command i3blocks -c ~/.i3/i3blocks.conf
+#         separator_symbol "  "
+#         #tray_output none
+#  	colors {
+#                 separator $darkterracotta
+#                 background $colordark
+#                 statusline #839496
+#                 #                       border          backg           text
+#                 focused_workspace       $verdigris      $verdigris      $colordark
+#                 active_workspace        $verdigris      $verdigris      $colordark
+#                 inactive_workspace      #32312d         #32312d         $verdigris
+#                 urgent_workspace        #d33936         #d33936         #fdf6e3
+#         }
+# }
 
-new_window pixel 5
+#polybar
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+
+#---------------------------------------------------------------------------------------------------
+#BORDER AND STUFF...
+#---------------------------------------------------------------------------------------------------
+new_window pixel 3
+
+#smart_borders on
 
 # Color variables
 set $unfocused_border #ca4862
@@ -166,6 +252,10 @@ client.placeholder      #ffffff #ffffff #ffffff #ffffff   #ffffff
 
 client.background       #ffffff
 
+#---------------------------------------------------------------------------------------------------
+#OTHER STUFF...
+#---------------------------------------------------------------------------------------------------
+
 # Set background
 exec_always --no-startup-id feh --bg-fill ~/.i3/bg1.jpg
 
@@ -174,12 +264,11 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%   
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%   #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle         #mute sound
 
-#gaps
-gaps inner 7
-gaps outer 7
-
 #rofi
 bindsym Mod1+d exec rofi -show run -font "Space Mono 10"
+
+#dmenu 
+#bindsym $mod+d exec dmenu_run -fn 'Overpass Mono:pixelsize=15' -l 5 -nf '#707880' -sf '#52bbb7' -nb '#1d1f21' -sb '#1d1f21'
 
 #for smooth transitions
 exec --no-startup-id compton -f
@@ -197,3 +286,7 @@ bindsym Control+Mod1+Delete exec $HOME/.i3/scripts/shutdown_menu
 bindsym $mod+Shift+f exec nautilus
 bindsym $mod+Shift+o exec opera
 bindsym $mod+Shift+b exec firefox
+bindsym $mod+Print exec spectacle
+#---------------------------------------------------------------------------------------------------
+#...AND THAT'S ALL HE WROTE.
+#---------------------------------------------------------------------------------------------------

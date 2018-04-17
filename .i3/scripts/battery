@@ -21,7 +21,6 @@ my $status;
 my $percent;
 my $full_text;
 my $short_text;
-#change $bat_number accordingly
 my $bat_number = 1;
 
 # read the first line of the "acpi" command output
