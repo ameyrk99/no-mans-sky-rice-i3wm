@@ -61,5 +61,5 @@ If that's all you need...
 
 ...and if colors are all you need...
 
-* <span style="color: #52bbb7">#52bbb7</span>
-* <span style="color: #ca4862">#ca4862</span>
+* Verdigris: #52bbb7 (the one that looks kind of blue)
+* Darkterracotta: #ca4862 (the one that looks kind of pink)
