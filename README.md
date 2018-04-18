@@ -9,7 +9,7 @@ Power Menus:
 ![PowerMenu 1](images/scpm1.png)
 ![PowerMenu 2](images/scpm2.png)
 
-Notifications:
+Dunst:
 
 ![Dunst](images/scdunst.png)
 
@@ -65,3 +65,4 @@ If that's all you need...
 
 * Verdigris: #52bbb7 (the one that looks kind of blue)
 * Darkterracotta: #ca4862 (the one that looks kind of pink)
+* #191919 (the dark background for various applications)
