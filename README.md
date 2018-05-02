@@ -54,7 +54,6 @@ they had any so you can check out their work if you want.
 #### Note:
 * Change $bat_number in .i3/scripts/battery accordingly
 * Shutdown menu/Powermenu won't work if you decided to use dmenu and not get rofi (unless you have zenity)
-* Log out and back in for lockscreen to change the wallpaper
 
 #### Wallpaper:
 If that's all you need...
