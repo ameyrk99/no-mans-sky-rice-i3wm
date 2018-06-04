@@ -1,0 +1,11 @@
+[/]
+foreground-color='rgb(143,222,180)'
+visible-name='nomanssky'
+palette=['rgb(46,52,54)', 'rgb(202,72,98)', 'rgb(61,189,89)', 'rgb(255,240,176)', 'rgb(88,188,184)', 'rgb(117,80,123)', 'rgb(6,152,154)', 'rgb(202,72,98)', 'rgb(111,111,111)', 'rgb(241,103,100)', 'rgb(202,72,98)', 'rgb(82,187,183)', 'rgb(143,222,205)', 'rgb(173,127,168)', 'rgb(82,187,183)', 'rgb(255,255,255)']
+use-system-font=false
+use-transparent-background=true
+use-theme-colors=false
+font='Monospace 10'
+background-color='rgb(25,25,25)'
+background-transparency-percent=5
+scrollbar-policy='never'
